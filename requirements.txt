@@ -1,0 +1,7 @@
+# /requirements.txt
+
+connexion[swagger-ui]
+flask
+python-dotenv
+python-jose
+six

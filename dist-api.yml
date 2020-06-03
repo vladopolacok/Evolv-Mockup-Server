@@ -1,0 +1,45 @@
+openapi: 3.0.0
+
+info:
+  title: Vibrant Evol Mockup API
+  description: Mockup API for Vibrant notification from Elmhurst
+  version: 1.0.0
+
+servers:
+  - url: 'https://api.epb-integration.digital.communities.gov.uk/'
+    description: Integration Service
+
+paths:
+  '/callbacks/status-change':
+    post:
+      summary: >-
+        Change status of the work allocation assessment.
+      operationId: mockedData.status_change__put
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssessmentStatus'
+      responses:
+        '200':
+          description: Assessment status updated
+        '400':
+          description: Problem with assessmet record
+
+components:
+  schemas:
+    AssessmentStatus:
+      type: object
+      properties:
+        ElmhurstId:
+          type: integer
+          example: 0
+        NewStatus:
+          type: integer
+          example: 0
+        AssessorId:
+          type: string
+          example: ''
+
+  links: {}
+  callbacks: {}
