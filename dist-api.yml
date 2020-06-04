@@ -6,7 +6,7 @@ info:
   version: 1.0.0
 
 servers:
-  - url: 'https://api.epb-integration.digital.communities.gov.uk/'
+  - url: 'https://preprod.vibrantevolve.co.uk'
     description: Integration Service
 
 paths:
@@ -31,15 +31,12 @@ components:
     AssessmentStatus:
       type: object
       properties:
-        ElmhurstId:
+        elmhurstId:
           type: integer
           example: 0
-        NewStatus:
+        newStatus:
           type: integer
           example: 0
-        AssessorId:
-          type: string
-          example: ''
 
   links: {}
   callbacks: {}
